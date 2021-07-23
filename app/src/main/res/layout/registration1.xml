@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="90sp"
+        android:layout_height="40sp"
+        android:src="@drawable/img_logo"
+        android:layout_marginTop="5sp"
+        android:layout_marginStart="5sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120sp"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계좌 확인"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이름 입력"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:layout_marginTop="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/id_num_front_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="주민번호 앞 6자리"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:layout_marginTop="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="20sp"
+                android:layout_margin="5sp"/>
+
+            <EditText
+                android:id="@+id/_num_back_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="뒤 7자리"
+                android:inputType="numberPassword"
+                android:textSize="20sp"
+                android:layout_marginTop="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/sms_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="SMS 인증"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:layout_marginTop="10sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/auth_request_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인증 요청"
+                android:textSize="20sp"
+                android:layout_marginTop="10sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/check_circle_button"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:background="@drawable/check_btn_background"
+        android:drawableStart="@drawable/check_circle_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40sp" />
+
+
+</RelativeLayout>

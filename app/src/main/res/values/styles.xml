@@ -1,10 +1,17 @@
 <resources>
     <!-- Base application theme. -->
+    <!-- 기존 코드
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- 상태바까지 View를 보여줄 수 있다.
+             android:windowDrawsSystemBarBackgrounds:true 시 상태바까지 View를 보여줄 수 있다. -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 
 </resources>
