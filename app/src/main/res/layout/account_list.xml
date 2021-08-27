@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<!-- navigation Drawer 참고 출처
+https://www.youtube.com/watch?v=ALTFLXKiPUY
+-->
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/account_list"
+    android:id="@+id/layout_drawer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:ignore="MissingDefaultResource">
+    android:layout_height="match_parent">
 
-    <!-- 로그인 화면에 메뉴 사라진 줄 모르고 미리 구현
-    참고 출처 : https://bongcando.tistory.com/4
-    다음에 마저 구현할 때 참고 -->
 
-    <!-- toolbar -->
-    <include layout="@layout/toolbar"/>
-
-    <!-- 메인 View -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="로그인 후 계정 화면"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:layout_height="match_parent">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="90sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_logo" />
+
+        <ImageView
+            android:id="@+id/btn_navi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_baseline_menu_50" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/naviView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:menu="@menu/navi_menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>

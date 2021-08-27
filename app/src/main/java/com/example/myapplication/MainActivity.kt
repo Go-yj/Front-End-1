@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.toolbar.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,12 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         login_button.setOnClickListener {
-            val intent = Intent(this, Registration1::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "로그인 버튼 클릭", Toast.LENGTH_SHORT).show()
         }
 
         account_check_button.setOnClickListener {
-            Toast.makeText(this, "계좌 인증 버튼 클릭", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, Registration1::class.java)
+            startActivity(intent)
        }
     }
 }

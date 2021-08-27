@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+    <group android:checkableBehavior="single">
+    </group>으로 <item> 감싸기
+    -->
+
+    <!-- 하위 메뉴 "현황확인" 누르면 나오도록 변경해야 함
+    참고 : https://developer.android.com/guide/topics/ui/menus.html?hl=ko#groups
+    -->
+    <item android:id="@+id/menu_item_1"
+        android:title="현황확인">
+        <menu>
+            <item android:id="@+id/menu_item_1.1"
+                android:title="요청 목록"/>
+            <item android:id="@+id/menu_item_1.2"
+                android:title="요청받은 목록"/>
+        </menu>
+    </item>
+    <item android:id="@+id/menu_item_2"
+        android:title="신고건 목록"/>
+
+</menu>
